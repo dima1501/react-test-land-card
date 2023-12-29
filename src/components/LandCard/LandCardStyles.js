@@ -89,11 +89,11 @@ export const CardText = styled.p`
     }
 `
 
-export const CardRoute = styled.div`
+export const CardRoute = styled.ul`
     margin-bottom: 10px;
 `
 
-export const CardRouteLine = styled.div`
+export const CardRouteLine = styled.li`
     display: flex;
     align-items: center;
     margin-bottom: 2px;
@@ -131,11 +131,11 @@ export const CardRouteTime = styled.p`
     }
 `
 
-export const CardCosts = styled.div`
+export const CardCosts = styled.ul`
     margin-bottom: 16px;
 `
 
-export const CardCostsLine = styled.div`
+export const CardCostsLine = styled.li`
     display: flex;
     margin-bottom: 4px;
 `
@@ -161,7 +161,7 @@ export const CardCostsName = styled.div`
     padding-bottom: 1px;
 `
 
-export const CardCostsCount = styled.div`
+export const CardCostsCount = styled.p`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -183,7 +183,7 @@ export const CardCostsCount = styled.div`
     }
 `
 
-export const CardCostsRange = styled.div`
+export const CardCostsRange = styled.p`
     color: #3F586E;
     font-family: "Exo 2";
     font-size: 13px;
@@ -212,7 +212,7 @@ export const CardTags = styled.div`
     }
 `
 
-export const CardTag = styled.div`
+export const CardTag = styled.li`
     color: #3F586E;
     text-align: center;
     font-family: "Exo 2";
@@ -229,7 +229,9 @@ export const CardTag = styled.div`
     }
 `
 
-export const CardTagsList = styled(CardTags)`
+export const CardTagsList = styled(CardTags).attrs(() => ({
+    as: 'ul',
+}))`
     & ${CardTag} {
         @media (max-width: 767px) {
             display: ${props => (props.$showalltags == 'true' ? 'block' : 'none')};

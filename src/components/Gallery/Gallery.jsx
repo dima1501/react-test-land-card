@@ -6,11 +6,15 @@ import pic_2 from "@/images/slide-2.jpeg"
 import { CustomCarousel, CustomCarouselSlide } from './GalleryStyles';
 
 export const Gallery = () => {
-    const [thumbWidth, setThumbWidth] = useState(window.innerWidth >= 768 ? 108 : 98);
+    const calcDimension = () => {
+        return window.innerWidth >= 768 ? 108 : 98
+    }
+
+    const [thumbWidth, setThumbWidth] = useState(calcDimension());
 
     useEffect(() => {
         const handleResize = () => {
-            setThumbWidth(window.innerWidth >= 768 ? 108 : 98);
+            setThumbWidth(calcDimension());
         };
 
         window.addEventListener('resize', handleResize);

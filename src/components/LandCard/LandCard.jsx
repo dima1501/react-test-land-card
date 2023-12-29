@@ -48,25 +48,25 @@ export const LandCard = () => {
 
                     <CardRoute>
                         <CardRouteLine>
-                            <CardRoutePic src={subwayBlue}></CardRoutePic>
+                            <CardRoutePic src={subwayBlue} alt=""></CardRoutePic>
                             <CardRoutePoint>Парнас</CardRoutePoint>
                             <CardRouteTime>~1 час 40 мин. на транспорте</CardRouteTime>
                         </CardRouteLine>
 
                         <CardRouteLine>
-                            <CardRoutePic src={highway}></CardRoutePic>
+                            <CardRoutePic src={highway} alt=""></CardRoutePic>
                             <CardRoutePoint>Камышовское шоссе</CardRoutePoint>
                             <CardRouteTime>~21 км от КАД</CardRouteTime>
                         </CardRouteLine>
 
                         <CardRouteLine>
-                            <CardRoutePic src={train}></CardRoutePic>
+                            <CardRoutePic src={train} alt="" ></CardRoutePic>
                             <CardRoutePoint>Ланская</CardRoutePoint>
                             <CardRouteTime>20 мин. пешком</CardRouteTime>
                         </CardRouteLine>
 
                         <CardRouteLine>
-                            <CardRoutePic src={train}></CardRoutePic>
+                            <CardRoutePic src={train} alt=""></CardRoutePic>
                             <CardRoutePoint>Ланская</CardRoutePoint>
                             <CardRouteTime>5 мин. на машине</CardRouteTime>
                         </CardRouteLine>
@@ -95,13 +95,13 @@ export const LandCard = () => {
 
                     <CardTags>
                         <CardTagsList $showalltags={showAllTags ? 'true' : 'false'}>
-                            <CardTag href="#">СНТ</CardTag>
-                            <CardTag href="#">Газ</CardTag>
-                            <CardTag href="#">Центральное электричество — 15 кВт</CardTag>
-                            <CardTag href="#">Центральное водоснабжение</CardTag>
-                            <CardTag href="#">Центральная канализация</CardTag>
-                            <CardTag href="#">Асфальтированные дороги</CardTag>
-                            <CardTag href="#">Рядом озеро</CardTag>
+                            <CardTag>СНТ</CardTag>
+                            <CardTag>Газ</CardTag>
+                            <CardTag>Центральное электричество — 15 кВт</CardTag>
+                            <CardTag>Центральное водоснабжение</CardTag>
+                            <CardTag>Центральная канализация</CardTag>
+                            <CardTag>Асфальтированные дороги</CardTag>
+                            <CardTag>Рядом озеро</CardTag>
                         </CardTagsList>
                         {!showAllTags && <CardBtn onClick={handleShowTags}>Показать все</CardBtn>}
                     </CardTags>
